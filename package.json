@@ -1,0 +1,22 @@
+{
+  "name": "webgpu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --target=es2020 --format=iife --loader:.wgsl=text --outfile=build/three-ddgi.main.js --global-name=main --keep-names",
+    "dev": "yarn build --watch",
+    "start": "yarn build --serve=8080 --servedir=."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@webgpu/types": "0.1.45",
+    "buffer-backed-object": "^1.0.1",
+    "esbuild": "^0.20.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.162.0",
+    "three": "^0.162.0"
+  }
+}
